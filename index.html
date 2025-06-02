@@ -1,15 +1,202 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>YourCompany</title>
-  <meta charset="utf-8">
-</head>
-  <script>
-    if (location.hostname === "www.shwazman.com") {
-      window.location.href = "https://shwazman.com" + location.pathname;
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Shwazman - Fintech AI Solutions</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    /* Reset */
+    * {
+      margin: 0; padding: 0; box-sizing: border-box;
     }
-  </script>
-  <body>
-    <h1>Shwazman</h1>
-  </body>
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #f5f7fa;
+      color: #222;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    nav {
+      background: #fff;
+      padding: 1rem 2rem;
+      box-shadow: 0 2px 8px rgb(0 0 0 / 0.1);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      font-weight: 700;
+      font-size: 1.5rem;
+      color: #0070f3;
+      text-decoration: none;
+    }
+    .logo svg {
+      width: 36px;
+      height: 36px;
+      fill: #0070f3;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+    }
+    nav ul li a {
+      color: #555;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+    nav ul li a:hover {
+      color: #0070f3;
+    }
+    main {
+      flex: 1;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      padding: 4rem 2rem;
+      max-width: 960px;
+      margin: 0 auto;
+      gap: 3rem;
+      flex-wrap: wrap;
+    }
+    .content {
+      flex: 1 1 300px;
+      max-width: 480px;
+    }
+    main h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      color: #0070f3;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .coming-soon {
+      background-color: #0070f3;
+      color: white;
+      font-weight: 700;
+      font-size: 1rem;
+      padding: 0.2rem 0.6rem;
+      border-radius: 20px;
+      user-select: none;
+    }
+    main p {
+      font-size: 1.25rem;
+      margin-bottom: 2.5rem;
+      color: #444;
+      line-height: 1.6;
+    }
+    a.cta-button {
+      background-color: #0070f3;
+      color: white;
+      padding: 1rem 2.5rem;
+      border-radius: 30px;
+      font-weight: 600;
+      font-size: 1.1rem;
+      text-decoration: none;
+      box-shadow: 0 6px 12px rgba(0, 112, 243, 0.3);
+      transition: background-color 0.3s ease, box-shadow 0.3s ease;
+      display: inline-block;
+    }
+    a.cta-button:hover {
+      background-color: #005ac1;
+      box-shadow: 0 8px 16px rgba(0, 90, 193, 0.5);
+    }
+    .graphic {
+      flex: 1 1 320px;
+      max-width: 320px;
+    }
+    footer {
+      background: #f0f0f0;
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+      color: #666;
+      user-select: none;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      main {
+        flex-direction: column;
+        gap: 2rem;
+      }
+      main h1 {
+        font-size: 2.4rem;
+      }
+      main p {
+        font-size: 1.1rem;
+      }
+    }
+    @media (max-width: 480px) {
+      nav ul {
+        gap: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="/" class="logo" aria-label="Shwazman Home">
+      <!-- Simple fintech AI logo: hexagon with circuit -->
+      <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+        <path d="M32 2 L58 16 L58 48 L32 62 L6 48 L6 16 Z" stroke="#0070f3" stroke-width="3" fill="none"/>
+        <circle cx="32" cy="32" r="6" fill="#0070f3" />
+        <line x1="32" y1="14" x2="32" y2="24" stroke="#0070f3" stroke-width="2" />
+        <line x1="32" y1="40" x2="32" y2="50" stroke="#0070f3" stroke-width="2" />
+        <line x1="20" y1="32" x2="26" y2="32" stroke="#0070f3" stroke-width="2" />
+        <line x1="38" y1="32" x2="44" y2="32" stroke="#0070f3" stroke-width="2" />
+      </svg>
+      Shwazman
+    </a>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+  <main>
+    <div class="content">
+      <h1>
+        AI-Powered Fintech Solutions
+        <span class="coming-soon">Coming Soon</span>
+      </h1>
+      <p>Revolutionizing finance with cutting-edge artificial intelligence and secure digital innovation. Drive smarter decisions and transform your business with Shwazman.</p>
+      <a href="mailto:info@shwazman.com" class="cta-button" aria-label="Contact Shwazman">Get In Touch</a>
+    </div>
+    <div class="graphic" aria-hidden="true">
+      <!-- Simple AI/Fintech-themed SVG illustration -->
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 280" width="320" height="320" fill="none" stroke="#0070f3" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="40" y="40" width="200" height="200" rx="30" ry="30" fill="#e0f0ff" />
+        <circle cx="140" cy="140" r="60" fill="#0070f3" opacity="0.15" />
+        <path d="M140 80v120M80 140h120" stroke="#005ac1" stroke-width="4" />
+        <circle cx="140" cy="140" r="15" fill="#0070f3" />
+        <path d="M140 125v30M125 140h30" stroke="#005ac1" stroke-width="3" />
+        <!-- Circuit style lines -->
+        <line x1="140" y1="80" x2="140" y2="60" stroke="#0070f3" />
+        <line x1="140" y1="200" x2="140" y2="220" stroke="#0070f3" />
+        <line x1="80" y1="140" x2="60" y2="140" stroke="#0070f3" />
+        <line x1="200" y1="140" x2="220" y2="140" stroke="#0070f3" />
+        <circle cx="140" cy="60" r="5" fill="#0070f3" />
+        <circle cx="140" cy="220" r="5" fill="#0070f3" />
+        <circle cx="60" cy="140" r="5" fill="#0070f3" />
+        <circle cx="220" cy="140" r="5" fill="#0070f3" />
+      </svg>
+    </div>
+  </main>
+  <footer>
+    &copy; 2025 Shwazman. All rights reserved.
+  </footer>
+</body>
 </html>
