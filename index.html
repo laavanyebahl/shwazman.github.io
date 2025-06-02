@@ -4,7 +4,12 @@
   <title>YourCompany</title>
   <meta charset="utf-8">
 </head>
-<body>
-  <h1>Welcome to Shwazman</h1>
-</body>
+  <script>
+    if (location.hostname === "www.shwazman.com") {
+      window.location.href = "https://shwazman.com" + location.pathname;
+    }
+  </script>
+  <body>
+    <h1>Welcome to Shwazman</h1>
+  </body>
 </html>
